@@ -214,7 +214,7 @@ def main():
 
     # setup the model for inference. Parameters used by gst_config
     model_obj = model_runner.ModelRunner(modeldir, paramsfile=paramsfile)
-    model_obj.load_model() #load model to get info about input data type
+    model_obj.load_model_tidl() #load model to get info about input data type
     
     #create the gstreamer pipeline based on model and camera parameters
     gst_conf = gst_configs.GstBuilder(model_params, cam_params, display_obj) 
